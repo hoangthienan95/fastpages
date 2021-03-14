@@ -57,7 +57,9 @@ See below for a more detailed list of features.
   - [Site Wide Configuration Options](#site-wide-configuration-options)
   - [Adjusting Page Width](#adjusting-page-width)
   - [Annotations and Highlighting With hypothes.is](#annotations-and-highlighting-with-hypothes.is)
+  - [Subscribing with RSS](#subscribing-with-rss)
   - [Syntax Highlighting](#syntax-highlighting)
+  - [Dark Mode](#dark-mode)
   - [Adding Citations via BibTeX](#adding-citations-via-bibtex)
   - [Writing Blog Posts With Jupyter](#writing-blog-posts-with-jupyter)
     - [Hide Input/Output Cells](#hide-inputoutput-cells)
@@ -82,7 +84,7 @@ See below for a more detailed list of features.
 
 ## Setup Instructions
 
-1.  Generate a copy of this repo by clicking [on this link](https://github.com/fastai/fastpages/generate).  Name your repo anything you like **except** {your-username}.github.io.
+1.  Generate a copy of this repo by clicking [on this link](https://github.com/fastai/fastpages/generate). Make sure to sign in to your account, or you will see a 404 error. Name your repo anything you like **except** {your-username}.github.io.
 
 2. **GitHub Actions will automatically open a PR** on your new repository ~ 30 seconds after the copy is created.  Follow the instructions in that PR to continue.
 
@@ -352,6 +354,13 @@ annotations: false
 
 > You can customize hypothes.is by reading [these configuration options](http://h.readthedocs.io/projects/client/en/latest/publishers/config/).  It is also a good idea to read [these docs](https://web.hypothes.is/for-publishers/#embedding) if you want to do more with hypothes.is.  However, before trying to customize this feature you should read the [customizing fastpages](#customizing-fastpages) section for important caveats.
 
+## Subscribing with RSS
+
+You can direct your readers to subscribe with [RSS feeds](https://en.wikipedia.org/wiki/RSS).  There are many RSS subscription services available on the internet.  Some examples include:
+
+1. [Feedrabbit](https://feedrabbit.com/)
+2. [Blogtrottr](https://blogtrottr.com/)
+
 ## Syntax Highlighting
 
 `fastpages` overrides the default syntax highlighting of minima with the [Dracula theme](https://draculatheme.com/).  
@@ -370,6 +379,10 @@ annotations: false
   @import "minima/fastpages-dracula-highlight";
   ```
 - If you don't like either of these themes, you can add your own CSS in [`_sass/minima/custom-styles.scss`](_sass/minima/custom-styles.scss).  See [customizing fastpages](#customizing-fastpages) for more details.
+
+## Dark Mode
+
+[This blog post](https://prudhvirampey.com/blog/colours/jekyll/css/fastpages/2020/10/30/hello-dark-mode.html) describes how to enable Dark Mode for fastpages.
 
 ## Adding Citations via BibTeX
 
@@ -391,6 +404,7 @@ You may want some code to be hidden in a collapsed element that the user can exp
 
 - To include code in a collapsable cell that **is collapsed by default**, place the comment `#collapse` at the top of the code cell.
 - To include code in a collapsable cell that **is open by default**, place the comment `#collapse_show` or `#collapse-show` at the top of the code cell.
+- To include the output under a collapsable element that is closed by default, place the comment `#collapse_output` or `#collapse-output` at the top of the code cell.
 
 ### Embedded Twitter and YouTube Content
 In a markdown cell in your notebook, use the following markdown shortcuts to embed Twitter cards and YouTube Videos.
